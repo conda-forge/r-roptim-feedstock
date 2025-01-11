@@ -12,7 +12,7 @@ source:
   sha256: 7ef0c2a2ddb3703efaabf337fa0026485875d5ffb35ba3ef5d60eb0c62c30686
 
 build:
-  number: 3
+  number: 4
   rpaths:
     - lib/R/lib/
     - lib/
@@ -31,6 +31,8 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-rcpp >=0.12.14             # [build_platform != target_platform]
+    - r-rcpparmadillo              # [build_platform != target_platform]
   host:
     - r-base
     - r-rcpp >=0.12.14
@@ -51,7 +53,6 @@ about:
   home: https://github.com/ypan1988/roptim/
   license: GPL-2.0-or-later
   summary: Perform general purpose optimization in R using C++. A unified wrapper interface is provided to call C functions of the five optimization algorithms ('Nelder-Mead', 'BFGS', 'CG', 'L-BFGS-B' and 'SANN') underlying optim().
-  license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
