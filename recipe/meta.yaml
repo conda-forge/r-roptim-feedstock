@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/roptim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/roptim/roptim_{{ version }}.tar.gz
-  sha256: 7ef0c2a2ddb3703efaabf337fa0026485875d5ffb35ba3ef5d60eb0c62c30686
+  sha256: 3dc9d3a7066ec6c263daf5d92488e46b2b0e62671c94a66d54059957d79bba35
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
